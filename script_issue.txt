@@ -1,0 +1,57 @@
+#!/bin/sh /etc/rc.common
+
+start(){
+    LinuxSPPLE 1 /dev/ttyBT0 115200 <<EOF
+    RegisterSPPLE
+    AdvertiseLE 1
+}
+stop(){
+    quit
+}
+
+------------output-----------
+
+OpenStack().
+Bluetooth Stack ID: 1.
+Device Chipset: 5.2.
+BD_ADDR: 0xFFFFFFFFFFFF
+Random Address Set: 0xF81A21B5174E
+
+
+******************************************************************
+* Command Options General: Help, Quit, GetLocalAddress,          *
+*                          EnableDebug, GetMTU, SetMTU           *
+* Command Options GAPLE:   SetDiscoverabilityMode,               *
+*                          SetConnectabilityMode,                *
+*                          SetPairabilityMode,                   *
+*                          ChangePairingParameters,              *
+*                          AdvertiseLE, StartScanning,           *
+*                          StopScanning, ConnectLE,              *
+*                          DisconnectLE, PairLE,                 *
+*                          LEPasskeyResponse,                    *
+*                          QueryEncryptionMode, SetPasskey,      *
+*                          DiscoverGAPS, DiscoverDIS,            *
+*                          GetLocalName, SetLocalName,           *
+*                          GetRemoteName,                        *
+*                          SetLocalAppearance,                   *
+*                          GetLocalAppearance,                   *
+*                          GetRemoteAppearance,                  *
+*                          GetLEParams, SetLEParams              *
+
+SPPLE>
+SPPLE>
+SPPLE>* Command Options SPPLE:   DiscoverSPPLE, RegisterSPPLE,         *
+*                          UnregisterSPPLE, Send,                *
+*                          ConfigureSPPLE, Read, Loopback,       *
+*                          DisplayRawModeData, AutomaticReadMode *
+******************************************************************
+
+SPPLE>
+Successfully registered SPPLE Service.
+
+SPPLE>
+
+SPPLE>   GAP_LE_Advertising_Enable success.
+
+SPPLE>Stack Shutdown.
+root@OpenWrt:/etc/init.d#
